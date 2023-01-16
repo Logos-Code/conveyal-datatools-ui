@@ -12,7 +12,7 @@
     required: true
     inputType: TEXT
     columnWidth: 12
-    helpContent: "El campo feed_publisher_name contiene el nombre completo de la organización que publica el feed. (Este puede ser el mismo que uno de los valores de agency_name en agency.txt). Las aplicaciones que consumen GTFS pueden mostrar este nombre cuando otorgan la atribución de los datos de un feed en particular."
+    helpContent: "El campo feed_publisher_name contiene el nombre completo de la organización que publica el feed. (Este puede ser el mismo que uno de los valores de agencia_nombre en agency.txt). Las aplicaciones que consumen GTFS pueden mostrar este nombre cuando otorgan la atribución de los datos de un feed en particular."
   - name: "feed_publisher_url"
     required: true
     inputType: URL
@@ -87,16 +87,16 @@
   name: agency.txt
   helpContent: Una o más agencias de transporte público que proporcionan los datos en este feed.
   fields:
-  - name: "agency_id"
+  - name: "agencia_id"
     required: false
     inputType: GTFS_ID
     columnWidth: 12
-    helpContent: "El campo agency_id es un ID que identifica de forma única a una agencia de transporte. Un feed de tránsito puede representar datos de más de una agencia. El agency_id es un conjunto de datos único. Este campo es opcional para los feeds de tránsito que solo contienen datos de una sola agencia."
-  - name: "agency_name"
+    helpContent: "El campo agencia_id es un ID que identifica de forma única a una agencia de transporte. Un feed de tránsito puede representar datos de más de una agencia. El agencia_id es un conjunto de datos único. Este campo es opcional para los feeds de tránsito que solo contienen datos de una sola agencia."
+  - name: "agencia_nombre"
     required: true
     inputType: TEXT
     columnWidth: 12
-    helpContent: "El campo agency_name contiene el nombre completo de la agencia de tránsito. Google Maps mostrará este nombre."
+    helpContent: "El campo agencia_nombre contiene el nombre completo de la agencia de tránsito. Google Maps mostrará este nombre."
   - name: "agency_url"
     required: true
     inputType: URL
@@ -284,12 +284,12 @@
     inputType: TEXT
     columnWidth: 12
     helpContent: El campo route_long_name contiene el nombre completo de una ruta. Este nombre suele ser más descriptivo que route_short_name y, a menudo, incluirá el destino o la parada de la ruta. Al menos uno de route_short_name o route_long_name debe de ser especificado, o potencialmente ambos, si corresponde. Si la ruta no tiene un nombre largo, por favor especifique un route_short_name y use una cadena vacía como valor para este campo.
-  - name: agency_id
+  - name: agencia_id
     required: false
     inputType: GTFS_AGENCY
     bulkEditEnabled: true
     columnWidth: 12
-    helpContent: El campo agency_id define una agencia para la ruta especificada. Se hace referencia a este valor desde el archivo agency.txt. Utilice este campo cuando proporcione datos para rutas de más de una agencia.
+    helpContent: El campo agencia_id define una agencia para la ruta especificada. Se hace referencia a este valor desde el archivo agency.txt. Utilice este campo cuando proporcione datos para rutas de más de una agencia.
   - name: route_desc
     required: false
     inputType: TEXT
@@ -891,12 +891,12 @@
     bulkEditEnabled: true
     columnWidth: 6
     helpContent: "El campo transfer_duration especifica el tiempo en segundos antes de que caduque una transferencia."
-  - name: agency_id
+  - name: agencia_id
     required: false
     inputType: GTFS_AGENCY
     bulkEditEnabled: true
     columnWidth: 12
-    helpContent: "Obligatorio para feeds con varias agencias definidas en el archivo agency.txt. Cada atributo de tarifa debe especificar un valor de agency_id para indicar a qué agencia se aplica la tarifa."
+    helpContent: "Obligatorio para feeds con varias agencias definidas en el archivo agency.txt. Cada atributo de tarifa debe especificar un valor de agencia_id para indicar a qué agencia se aplica la tarifa."
 
 
 - id: fare_rules
